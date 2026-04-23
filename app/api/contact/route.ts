@@ -148,7 +148,7 @@ export async function POST(req: NextRequest) {
   /* 4. Build and send email */
   try {
     const { error } = await resend.emails.send({
-      from:     "support@ikhtiyaar.com",   // swap for your verified domain later
+      from:     `${data.firstName} ${data.lastName} <support@ikhtiyaar.com>`,   // swap for your verified domain later
       to:       [BUSINESS_EMAIL],
       replyTo:  data.email,
       subject:  `New inquiry: ${data.subject} — ${data.firstName} ${data.lastName}`,
