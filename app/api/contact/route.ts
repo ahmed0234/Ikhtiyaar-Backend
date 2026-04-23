@@ -6,7 +6,7 @@ import { buildEmailHtml, type ContactFormData } from "@/lib/email-template";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 /* ── Destination — your business inbox ──────────────────── */
-const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL ?? "";
+const BUSINESS_EMAIL = "hassankiller@gmail.com";
 
 /* ── CORS headers ────────────────────────────────────────── */
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN ?? "*";
