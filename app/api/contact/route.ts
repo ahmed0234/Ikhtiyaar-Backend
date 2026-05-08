@@ -52,13 +52,11 @@ function validateField(key: string, value: unknown): string | null {
       return null;
 
     case "website":
-      if (v && !/^https?:\/\/.+/.test(v)) return "Website must start with http:// or https://";
       if (v.length > 500) return "Website URL is too long";
       return null;
 
     case "message":
       if (!v) return "Message is required";
-      if (v.length < 20) return "Message must be at least 20 characters";
       if (v.length > 5000) return "Message is too long (max 5000 characters)";
       return null;
 
